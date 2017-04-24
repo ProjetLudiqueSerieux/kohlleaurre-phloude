@@ -1,4 +1,4 @@
-# Color Flood
+# <p align = "center">COLOR FLOOD</p>
 
 # Installation et documentation du jeu :
 
