@@ -1,4 +1,8 @@
-# kohlleaurre-phloude
-test
+# Color Flood
 
-Il faut écrire des trucs ici
+# Installation du jeu :
+
+
+# Utilisation du jeu :
+
+
