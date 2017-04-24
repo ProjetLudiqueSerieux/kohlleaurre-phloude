@@ -2,7 +2,7 @@
 \file grille.c
 *\author Quentin Durand
 *\date 21/04/2017
-*\brief desrciption de grille.c
+*\brief description de grille.c
 */
 
 #include "grille.h"
@@ -12,7 +12,7 @@
 
 /**
 *\fn int** creer_grille(int n)
-*\brief creer une grille non initialisée de taille n
+*\brief créer une grille non initialisée de taille n
 *\param int n, taille de la grille
 *\return une grille non initialisée de taille n
 */
@@ -26,7 +26,7 @@ int** creer_grille(int n){
 
 /**
 *\fn void vide_grille(int** grille,int n)
-*\brief efface une grille et la memoire qui lui est allouee
+*\brief efface une grille et la mémoire qui lui est allouée
 *\param int** grille, int n taille de la grille
 *\return void
 */
@@ -51,7 +51,7 @@ void alea_init(int** grille,int n){
 }
 /**
 *\fn void fichier_init(int** grille,int n,const char* fichier)
-*\brief initialise une grille a partir d'une serie de couleur contenue dans un fichier
+*\brief initialise une grille a partir d'une série de couleur contenue dans un fichier
 *\param int** grille, int n la taille de la grille, const char* fichier le fichier contenant les couleurs
 *\return void
 */
@@ -73,11 +73,7 @@ void fichier_init(int** grille,int n,const char* fichier){
 	}
 }
 
-/**
-*\fn int main ()
-*\brief entree du programme
-*\return 
-*/
+
 
 int main (){
 	return 0;
