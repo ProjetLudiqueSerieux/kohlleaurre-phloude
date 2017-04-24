@@ -1,10 +1,13 @@
 # Color Flood
 
-# Installation du jeu :
+# Installation et documentation du jeu :
+
+Commande pour accéder à la documentation : 
+<em>make documentation</em>
 
 
-Commande pour compiler :
-<em>gcc -g nom_du_fichier.c -o nom_de_l_executable</em>
+Commande pour compiler les fichier grille.c et tache.c :
+<em>make LotA</em>
 
 
 Test de l'absence de fuite de mémoire : 
