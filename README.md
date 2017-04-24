@@ -4,7 +4,7 @@
 
 
 Commande pour compiler :
-gcc -g nom_du_fichier.c -o nom_de_l_executable
+<em>gcc -g nom_du_fichier.c -o nom_de_l_executable</em>
 
 
 Test de l'absence de fuite de mémoire : 
