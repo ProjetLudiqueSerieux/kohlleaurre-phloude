@@ -178,13 +178,18 @@ int main(){
 	  }
   }
   printf("\n");
-  init_tache(tab,n)
-  fichier_init(tab,n,"fiche.txt");
+  int** tache=init_tache(tab,n)
+  int taille_tache = cher_taille_tache(tache);	
+  chang_coul(tab,tache,taille_tache,c);
+  fichier_init(tab,n,"fichier.txt");
   for( i=0;i<n;i++ ){
 	  for( j=0;j<n;j++ ){
 		  printf("%i|",tab[i][j]);
 	  }
   }
-	
+  int** tache=init_tache(tab,n)
+  int taille_tache = cher_taille_tache(tache);	
+  chang_coul(tab,tache,taille_tache,c);
+  fichier_init(tab,n,"fichier.txt");
   return 0;
 }
