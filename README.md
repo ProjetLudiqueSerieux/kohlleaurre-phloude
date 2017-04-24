@@ -15,6 +15,8 @@
 <b>Test de l'absence de fuite de mémoire pour les fichiers grille.c et tache.c : </b>
 <em> valgrind --leak-check=yes ./LotA </em> (il faut avoir taper la commande <em>make LotA</em> avant)
 
+<b>Commande pour lancer les tests unitaires :</b><em>gcc     test_grille.c  grille.c  -o test_grille -I /usr/local/Cellar/cunit/2.1-3/include/ -lCUnit -L /usr/local/Cellar/cunit/2.1-3/lib/</em>
+
 
 <br>
 
