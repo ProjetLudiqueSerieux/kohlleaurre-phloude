@@ -1,5 +1,6 @@
 # <p align = "center">COLOR FLOOD</p>
 
+<br>
 # Installation et documentation du jeu :
 
 <b>Commande pour accéder à la documentation : </b>
@@ -14,7 +15,7 @@
 <em> valgrind --leak-check=yes ./LotA </em> (il faut avoir taper la commande <em>make LotA</em> avant)
 
 
-
+<br>
 # Utilisation du jeu :
 
 
