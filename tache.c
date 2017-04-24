@@ -167,6 +167,24 @@ int cond_gagner(int** tab, int taille){
 }
 
 int main(){
-  
+  int n=5;
+  int** tab =creer_grille(n);
+  alea_init(tab,n);
+  int i,j;
+  printf("\n");
+  for( i=0;i<n;i++ ){
+	  for( j=0;j<n;j++ ){
+		  printf("%i|",tab[i][j]);
+	  }
+  }
+  printf("\n");
+  init_tache(tab,n)
+  fichier_init(tab,n,"fiche.txt");
+  for( i=0;i<n;i++ ){
+	  for( j=0;j<n;j++ ){
+		  printf("%i|",tab[i][j]);
+	  }
+  }
+	
   return 0;
 }
