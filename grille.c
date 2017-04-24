@@ -80,15 +80,5 @@ void fichier_init(int** grille,int n,const char* fichier){
 */
 
 int main (){
-	int** grille = creer_grille(3);
-	fichier_init(grille,3,"testcolor.txt");
-	int i,j;
-	for(i=0;i<3;i++){
-		for(j=0;j<3;j++)
-			printf("%i ",grille[i][j]);
-		printf("\n");
-	}
-	fichier_init(grille,3,"testcolor.txt");
-	vide_grille(grille,3);
 	return 0;
 }
