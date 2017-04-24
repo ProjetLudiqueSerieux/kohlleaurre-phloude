@@ -39,6 +39,12 @@ int app_tache(int coord0, int coord1, int ** tache, int taille_tache){
   return 0;
 }
 
+/**
+*\fn void maj_tache( int** tab, int taille, int** tache, int taille_tache, int c )
+*\brief met à jour la tache en se disant que l'utilisateur a cliqué sur la couleur c. On parcourt la liste des cases dans la tache. On regarde tous les voisins de chacune des cases ( cases du dessus,dessous, sur la gauche et sur la droite si elles existent. ) ; si une case est de couleur c, on l'ajoute à la tache ( ce qui modifie la taille de tache ). On s'arrête quand on a parcouru toute la tache.
+*\param int** tab la grille, int taille sa taille, int** tache la tache, int taille_tache sa taille, int c la couleur.
+*\return void
+*/
 /* On met à jour la tache en se disant que l'utilisateur a cliqué sur la couleur c. */
 /* On parcourt la liste des cases dans la tache. On regarde tous les voisins de chacune des cases ( cases du dessus,dessous, sur la gauche et sur la droite si elles existent ) ; si une case est de couleur c, on l'ajoute à la tache ( ce qui modifie la taille de tache ).
    On s'arrête quand on a parcouru toute la tache.*/ 
@@ -83,6 +89,12 @@ void maj_tache( int** tab, int taille , int** tache, int taille_tache , int c ){
   }
 }
 
+/**
+*\fn int cher_taille_tache( int** tache )
+*\brief trouve la taille de la tache
+*\param int** tache la tache.
+*\return la taille de la tache.
+*/
 /* initialise la tache */
 /* On crée la tache en allouant la bonne taille ( n^2 ) et on la met à jour.*/ 
 
@@ -100,6 +112,12 @@ int** init_tache( int** tab, int taille ){
   return tache;
 }
 
+/**
+*\fn int cher_taille_tache( int** tache )
+*\brief trouve la taille de la tache
+*\param int** tache la tache.
+*\return la taille de la tache.
+*/
 /* trouve la taille de la tache */
 
 int cher_taille_tache(int** tache){
@@ -110,7 +128,12 @@ int cher_taille_tache(int** tache){
   return taille;
 }
 
-
+/**
+*\fn void chang_coul( int** tab, int** tache, int taille_tache, int c )
+*\brief change la couleur de la tache
+*\param int** tab la grille, int** tache la tache, int taille_tache sa taille, int c la couleur.
+*\return void
+*/
 /* change la couleur de la tache */
 
 void chang_coul( int** tab, int** tache, int taille_tache,int c ){
@@ -120,8 +143,15 @@ void chang_coul( int** tab, int** tache, int taille_tache,int c ){
   }
 }
 
+/**
+*\fn int cond_gagner( int** tab, int taille )
+*\brief test si la condition de victoire est verifiee
+*\param int** tab la grille, int taille_tache sa taille.
+*\return Si le joueur a gagné, on retourne 0 ; sinon on retourne 1.
+*/
 /* test si la condition de victoire est verifiee*/
 /* Si le joueur a gagné, on retourne 0 ; sinon on retourne 1.*/ 
+
 int cond_gagner(int** tab, int taille){
   int c= tab[0][0];
   int i,j;
@@ -135,8 +165,6 @@ int cond_gagner(int** tab, int taille){
   }
   return 0;
 }
-
-
 
 int main(){
   
