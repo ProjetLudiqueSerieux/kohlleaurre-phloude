@@ -34,4 +34,36 @@ void test_maj_tache(void){
   int taille_tache = cher_taille_tache(tache);
   maj_tache(tab, 3, tache, taille_tache, 2);
   CU_ASSERT(taille_tache == 5);
-  CU_ASSERT(
+}
+
+
+
+int main()
+{
+	CU_pSuite pSuite = NULL;
+	
+	if (CU_initialize_registry() != CUE_SUCCESS) {
+		return CU_get_error();
+	}
+
+	pSuite = CU_add_suite("Suite",NULL,NULL);
+
+	if (pSuite==NULL) {
+		CU_cleanup_registry();
+		return CU_get_error();
+	}
+    if (CU_add_test (pSuite, "test of 1",test_app_tache)==NULL) {
+        CU_cleanup_registry();
+        return CU_get_error();
+	}
+    if (CU_add_test (pSuite, "test of 2",test_maj_tache)==NULL) {
+        CU_cleanup_registry();
+        return CU_get_error();
+	}
+   
+    CU_basic_set_mode(CU_BRM_VERBOSE);
+    CU_basic_run_tests();
+    //CU_cleanup_registry();
+    
+	return 0;
+}
