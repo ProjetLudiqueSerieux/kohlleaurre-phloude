@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "lotB_debut.h"
 #include "grille.h"
 #include "tache.h"
 
