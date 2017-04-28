@@ -15,7 +15,7 @@ int main()
   }
   printf("Entrez le nombre de coup autorisé : \n");
   int nb_coup = 0;
-  while (n_coup <= 0)
+  while (nb_coup <= 0)
   {
     scanf("%i",&nb_coup);
     if (nb_coup <= 0)
