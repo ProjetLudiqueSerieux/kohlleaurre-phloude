@@ -68,3 +68,32 @@ int demande_int()
   return res;
 }
 
+/**
+*\fn int sel_coul(void)
+*\brief attend que l'utilisateur entre le numero de la couleur et lui fait recommencer s'il a fait une erreur.
+*\param void
+*\return un int entré par l'utilisateur
+*/
+int sel_coul(){
+   int n=0;
+   printf("Veuillez sélectionner une couleur parmi celles suivantes :\n1 pour Rouge,\n2 pour Jaune,\n3 pour Bleu,\n4 pour Vert,\n5 pour Orange,\n6 pour Cuisse de nymphe émue.");
+   scanf("%i",&n);
+   if ( n%1 == 0 ){
+      if ( 1<=n ){
+         if ( n<=6 ){
+            return n;
+}
+         else{
+            printf("Veuillez rentrer un chiffre entre 1 et 6");
+            return sel_coul();
+}
+}
+      else{
+            printf("Veuillez rentrer un chiffre entre 1 et 6");
+            return sel_coul();}
+
+}
+   else{
+       printf("Veuillez rentrer un chiffre entre 1 et 6");
+       return sel_coul();}
+}
