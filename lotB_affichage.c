@@ -1,22 +1,32 @@
 #include "grille.h"
 #include "tache.h"
-#include "lotB_debut.h"
-#include "lotB_affichage.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-char couleur[6] = {'R','J','B','V','O','C'};
+char couleur[6] = {'R','J','B','V','O','C'}; //Définition des couleurs
 
-
+/**
+*\fn affiche_grille(int ** grille,int n,int r)
+*\brief affiche la grille de jeu dans le terminal
+*\param int** grille, la grille à afficher
+*\return void
+*/
+ 
 void affiche_grille(int ** grille,int n,int r)
 {
   int i,j;
+  for(i=0;i<3*n;i++)
+	  printf("_");
   for (i=0;i<n;i++)
-    {
-    for(j=0;j<n;j++)
-      printf("%c  ",couleur[grille[i][j]]);
-    printf("\n");
-    }
+	{
+	printf("|  ");
+	for(j=0;j<n;j++)
+	  printf("%c  ",couleur[grille[i][j]]);
+	printf("\n");
+	}
+	printf("|");
+  for(i=0;i<3*n;i++)
+	printf("_");
   printf("coups restants : %i",r);
 }
 
