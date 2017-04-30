@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "grille.h"
 #include "tache.h"
-#include "affichage.h"
+#include "lotB_affichage.h"
 
 int main()
 {
