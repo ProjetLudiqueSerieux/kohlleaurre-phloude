@@ -1,5 +1,6 @@
 #include "grille.h"
 #include "tache.h"
+#include "lotB_affichage.h"
 #include <stdio.h>
 #include <stdlib.h>
 
