@@ -98,6 +98,13 @@ int sel_coul(){
        return sel_coul();}
 }
 
+/**
+*\fn void trans_grille(int*** grille, int taille, int** *tache, int *taille_tache, int *cp_fait, int nouv_coul )
+*\brief applique les transformation nécessaire a la grille : changement de couleur de la tache, mise à jour de la tache et du nombre de coup restant.
+*\param grille la grille de jeu et sa taille en pointeur, la tache et sa taille en pointeur, et pointeur vers le nombre de coup restant et la nouvelle couleur sélectionnée.
+*\return void
+*/
+
 void trans_grille(int** *grille, int taille, int** *tache, int *taille_tache, int *cp_fait, int nouv_coul ){
     maj_tache(grille,taille,&tache,&taille_tache,nouv_coul);
     int i;
