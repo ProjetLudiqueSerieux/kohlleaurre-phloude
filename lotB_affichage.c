@@ -97,3 +97,15 @@ int sel_coul(){
        printf("Veuillez rentrer un chiffre entre 1 et 6");
        return sel_coul();}
 }
+
+void trans_grille(int** *grille, int taille, int** *tache, int *taille_tache, int *cp_fait, int nouv_coul ){
+    maj_tache(grille,taille,&tache,&taille_tache,nouv_coul);
+    int i;
+    for (i=0;i<taille_tache;i++){
+      case_tache=tache[i];
+      if (grille[case_tache[0]][case_tache[1]] != nouv_coul){
+        grille[case_tache[0]][case_tache[1]] = nouv_coul;
+      }
+    }
+    cp_fait ++;
+}
