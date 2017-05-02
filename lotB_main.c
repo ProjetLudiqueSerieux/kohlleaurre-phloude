@@ -1,3 +1,6 @@
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -35,9 +38,9 @@ int main()
 	}
   else
     {
-		printf("Vous avez perdu\n");
+		printf("Vous avez perdu !\n");
 		return 0;
 	}
-  
-  return 0;
+  vide_grille(&grille,n);
+  vide_grille(&tache,taille_tache);
 }

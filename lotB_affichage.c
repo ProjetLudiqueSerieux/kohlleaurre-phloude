@@ -1,8 +1,8 @@
 /**
-*\file lot_affichage.c
+*\file lotB_affichage.c
 *\author Quentin Durand Romanus Rosari
 *\date 02/05/2017
-*\brief desrciption de lot_affichage.c
+*\brief desrciption de lotB_affichage.c
 */
 
 #include "grille.h"
@@ -91,7 +91,7 @@ int demande_int()
 
 int sel_coul(){
    int n=0;
-   printf("Veuillez sélectionner une couleur parmi celles suivantes :\n0 pour Rouge,\n1 pour Jaune,\n2 pour Bleu,\n3 pour Vert,\n4 pour Orange,\n5 pour Cuisse de nymphe émue.\n(Oui, c'est une couleur)\n");
+   printf("Veuillez sélectionner une couleur parmi celles suivantes :\n0 pour Rouge,\n1 pour Jaune,\n2 pour Bleu,\n3 pour Vert,\n4 pour Orange,\n5 pour Cuisse de nymphe.\n");
    scanf("%i",&n);
    if ( n%1 == 0 ){
       if ( 0<=n ){
