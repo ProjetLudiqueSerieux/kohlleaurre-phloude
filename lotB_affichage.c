@@ -1,10 +1,18 @@
+/**
+*\file lot_affichage.c
+*\author Quentin Durand Romanus Rosari
+*\date 02/05/2017
+*\brief desrciption de lot_affichage.c
+*/
+
 #include "grille.h"
 #include "tache.h"
 #include "lotB_affichage.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-char couleur[6] = {'R','J','B','V','O','C'}; //Définition des couleurs
+char couleur[6] = {'R','J','B','V','O','C'};
+
 
 /**
 *\fn affiche_grille(int ** grille,int n,int r)
@@ -16,19 +24,24 @@ char couleur[6] = {'R','J','B','V','O','C'}; //Définition des couleurs
 void affiche_grille(int ** grille,int n,int r)
 {
   int i,j;
-  for(i=0;i<3*n;i++)
-	  printf("_");
+  printf("|");
+  for(i=0;i<3*n+2;i++)
+	  printf("-");
+  printf("|");
+  printf("\n");
   for (i=0;i<n;i++)
 	{
 	printf("|  ");
 	for(j=0;j<n;j++)
 	  printf("%c  ",couleur[grille[i][j]]);
+  	printf("|");
 	printf("\n");
 	}
-	printf("|");
-  for(i=0;i<3*n;i++)
-	printf("_");
-  printf("coups restants : %i",r);
+  printf("|");
+  for(i=0;i<3*n+2;i++)
+	printf("-");
+  printf("|");
+  printf("\ncoups restants : %i\n\n",r);
 }
 
 /**
@@ -68,51 +81,38 @@ int demande_int()
   return res;
 }
 
+
 /**
 *\fn int sel_coul(void)
 *\brief attend que l'utilisateur entre le numero de la couleur et lui fait recommencer s'il a fait une erreur.
 *\param void
 *\return un int entré par l'utilisateur
 */
+
 int sel_coul(){
    int n=0;
-   printf("Veuillez sélectionner une couleur parmi celles suivantes :\n1 pour Rouge,\n2 pour Jaune,\n3 pour Bleu,\n4 pour Vert,\n5 pour Orange,\n6 pour Cuisse de nymphe émue.");
+   printf("Veuillez sélectionner une couleur parmi celles suivantes :\n0 pour Rouge,\n1 pour Jaune,\n2 pour Bleu,\n3 pour Vert,\n4 pour Orange,\n5 pour Cuisse de nymphe émue.\n(Oui, c'est une couleur)\n");
    scanf("%i",&n);
    if ( n%1 == 0 ){
-      if ( 1<=n ){
-         if ( n<=6 ){
+      if ( 0<=n ){
+         if ( n<=5 ){
             return n;
 }
          else{
-            printf("Veuillez rentrer un chiffre entre 1 et 6");
+            printf("Veuillez rentrer un chiffre entre 0 et 5");
             return sel_coul();
 }
 }
       else{
-            printf("Veuillez rentrer un chiffre entre 1 et 6");
+            printf("Veuillez rentrer un chiffre entre 0 et 5");
             return sel_coul();}
 
 }
    else{
-       printf("Veuillez rentrer un chiffre entre 1 et 6");
+       printf("Veuillez rentrer un chiffre entre 0 et 5");
        return sel_coul();}
 }
 
-/**
-*\fn void trans_grille(int*** grille, int taille, int** *tache, int *taille_tache, int *cp_fait, int nouv_coul )
-*\brief applique les transformation nécessaire a la grille : changement de couleur de la tache, mise à jour de la tache et du nombre de coup restant.
-*\param grille la grille de jeu et sa taille en pointeur, la tache et sa taille en pointeur, et pointeur vers le nombre de coup restant et la nouvelle couleur sélectionnée.
-*\return void
-*/
 
-void trans_grille(int** *grille, int taille, int** *tache, int *taille_tache, int *cp_fait, int nouv_coul ){
-    maj_tache(grille,taille,&tache,&taille_tache,nouv_coul);
-    int i;
-    for (i=0;i<taille_tache;i++){
-      case_tache=tache[i];
-      if (grille[case_tache[0]][case_tache[1]] != nouv_coul){
-        grille[case_tache[0]][case_tache[1]] = nouv_coul;
-      }
-    }
-    cp_fait ++;
-}
+
+

@@ -7,27 +7,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "grille.c"
+#include "grille.h"
 #include "tache.h"
 
 
-/**
-*\fn int** rempl_coul( int** tab, int x, int y, int c )
-*\brief remplit la case (x,y) avec la couleur c
-*\param int** tab la grille, int x la 1ère coordonnée, int y la 2ème coordonnée, int c la couleur.
-*\return void
-*/
-/* remplit la case (x,y) avec la couleur c */
-
-/*void rempl_coul( int** *tab, int x, int y, int c ){
-  (*tab)[x][y] = c;
-}
-*/
 
 /**
-*\fn int** app_tacje( int** tab, int x, int y, int c )
+*\fn int** app_tache( int** tab, int x, int y, int c )
 *\brief remplit la case (x,y) avec la couleur c
-*\param int** tab la grille, int x la 1ère coordonnée, int y la 2ème coordonnée, int c la couleur.
+*\param int** tab la grille int x la 1ère coordonnée, int y la 2ème coordonnée, int c la couleur.
 *\return void
 */
 /* fonction d'appartenance à la tache*/
@@ -93,12 +81,12 @@ void maj_tache( int** tab, int taille , int** tache, int *taille_tache , int c )
 }
 
 /**
-*\fn int cher_taille_tache( int** tache )
-*\brief trouve la taille de la tache
+*\fn int init_tache( int** tache )
+*\brief initilise la tache
 *\param int** tache la tache.
 *\return la taille de la tache.
 */
-/* initialise la tache */
+
 /* On crée la tache en allouant la bonne taille ( n^2 ) et on la met à jour.*/
 
 int** init_tache( int** tab, int taille ){
@@ -119,8 +107,8 @@ int** init_tache( int** tab, int taille ){
 /**
 *\fn int cher_taille_tache( int** tache )
 *\brief trouve la taille de la tache
-*\param int** tache la tache.
-*\return la taille de la tache.
+*\param int** tache, la tache
+*\return la taille de la tache
 */
 /* trouve la taille de la tache */
 
@@ -138,7 +126,7 @@ int cher_taille_tache(int** tache){
 *\param int** tab la grille, int** tache la tache, int taille_tache sa taille, int c la couleur.
 *\return void
 */
-/* change la couleur de la tache */
+
 
 void chang_coul( int** tab, int** tache, int taille_tache,int c ){
   int i;
@@ -172,59 +160,3 @@ int cond_gagner(int** tab, int taille){
 
 
 
-/*
-int main(){
-  srand(time(NULL));
-  int ** tab = creer_grille(5);
-  alea_init(tab,5);
-  int ** tache = init_tache(tab, 5);
-  int taille_tache = cher_taille_tache(tache);
-  int i,j;
-  for (i=0;i<5;i++)
-    {
-      for (j=0;j<5;j++)
-	printf("%d ", tab[i][j]);
-      printf("\n");
-    }
-
-  
-  printf("taille tache : %d\n", taille_tache);
-  printf("tache : \n");
-
-  int x;
-  for(x=0;x<taille_tache; x++)
-    {
-      printf("(%d , %d) ", tache[x][0], tache[x][1]);
-    }
-  printf("\n");
-  int c;
-  int y, compt;
-
-  for (compt = 0; compt<7; compt++)
-    {
-      scanf("%i", &c);
-      maj_tache(tab, 5, tache, &taille_tache, c);
-
-      printf("taille tache : %d\n", taille_tache);
-      printf("tache : \n");
-
-      for(y=0;y<taille_tache; y++)
-	{
-	  printf("(%d , %d) ", tache[y][0], tache[y][1]);
-	}
-      printf("\n");
-
-      chang_coul(tab, tache, taille_tache, c);
-  
-      for (i=0;i<5;i++)
-	{
-	  for (j=0;j<5;j++)
-	    printf("%d ", tab[i][j]);
-	  printf("\n");
-	}
-    }
-  
-  return 0;
-}
-
-*/

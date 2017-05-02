@@ -4,5 +4,6 @@
 void affiche_grille(int ** grille,int n,int r);
 void purger();
 int demande_int();
+int sel_coul();
 
 #endif
