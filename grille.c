@@ -13,7 +13,7 @@
 /**
 *\fn int** creer_grille(int n)
 *\brief creer une grille non initialisée de taille n
-*\param int n, taille de la grille
+*\param n taille de la grille
 *\return une grille non initialisée de taille n
 */
 int** creer_grille(int n){
@@ -27,24 +27,26 @@ int** creer_grille(int n){
 /**
 *\fn void vide_grille(int** grille,int n)
 *\brief efface une grille et la memoire qui lui est allouee
-*\param int** grille, int n taille de la grille
+*\param grille
+*\param n taille de la grille
 *\return void
 */
 void vide_grille(int*** grille,int n){
 	int i;
 	for (i=0;i<n;i++)
 	{
-		free((*grille)[i]);
-		(*grille)[i]=NULL;
+	  free((*grille)[i]);
+	  (*grille)[i] = NULL;
 	}
 	free((*grille));
-	(*grille)=NULL;
+	(*grille) = NULL;
 }
 
 /**
 *\fn void alea_init(int** grille,int n)
 *\brief initialise une grille de taille n en la remplissant de couleur aléatoires
-*\param int** grille, int n la taille de la grille
+*\param grille
+*\param n la taille de la grille
 *\return void 
 */
 void alea_init(int** grille,int n){
@@ -56,7 +58,9 @@ void alea_init(int** grille,int n){
 /**
 *\fn void fichier_init(int** grille,int n,const char* fichier)
 *\brief initialise une grille a partir d'une serie de couleur contenue dans un fichier
-*\param int** grille, int n la taille de la grille, const char* fichier le fichier contenant les couleurs
+*\param grille
+*\param n la taille de la grille
+*\param fichier le fichier contenant les couleurs
 *\return void
 */
 

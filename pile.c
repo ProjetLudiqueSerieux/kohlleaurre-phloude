@@ -1,23 +1,46 @@
 
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "pile.h"
 
-bool is_empty (Pile p){
-  pile->sommet==NULL;
+Pile creer_pile (){
+  Pile p;
+  p.sommet = NULL;
+  return p;
+}
+
+int is_empty (Pile p){
+  return p.sommet == NULL;
 }
 
 void empiler (Pile *p, int valsuivant){
-  Maillon *nouveau;
-  nouveau->nombre = valsuivant;
-  nouveau->suivant=p->sommet;
-  pile->sommet=valsuivant;
+  Element *nouveau = malloc(sizeof(Element));
+  if (nouveau == NULL)
+    exit(1);
+  nouveau->value = valsuivant;
+  nouveau->suivant = p->sommet;
+  p->sommet = nouveau;
 }
-int depiler(Pile *p){
-  if !(is_empty(p))
-    exit();
-  Maillon *valeur=p->sommet;
-  p->sommet= valeur->suivant;
-  return valeur->value;
+
+
+ int depiler(Pile *pile){
+    if (pile == NULL){
+      exit(1);
+    }
+    int nombreDepile = 0;
+    Element *elementDepile = pile->sommet;
+    if (pile != NULL && pile->sommet != NULL)
+    {
+        nombreDepile = elementDepile->value;
+        pile->sommet = elementDepile->suivant;
+        free(elementDepile);
+    }
+    return nombreDepile;
 }
+
+int sommet(Pile *p){
+  return p->sommet->value;
+}
+
 
   

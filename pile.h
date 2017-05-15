@@ -1,16 +1,23 @@
 #ifndef PILES
 #define PILES
 
-typedef struct element {
+typedef struct Element Element;
+
+struct Element
+{
   int value;
-  element *suivant;
-}
-  Maillon;
+  Element *suivant;
+};
 
-typedef struct pile_s {
-  Maillon *sommet}
-  Pile;
-
+typedef struct Pile Pile;
+ struct Pile
+ {
+  Element *sommet;
+ };
+Pile creer_pile();
+int is_empty(Pile);
 void empiler(Pile*,int);
 int depiler(Pile*);
+int sommet(Pile*);
+
 #endif
